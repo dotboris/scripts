@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# check if root
+if [[ $EUID -ne 0 ]]; then
+	echo "Requires root privileges."
+	exit 1
+fi
+
+# get the command line argument
+if [ -z $1 ]; then
+	# display usage
+	echo "Opens a port throught the firewall (UDP & TCP)"
+	echo "usage: $0 <port>"
+	exit 2
+else
+	# set the port
+	PORT=$1
+fi
+
+
+# open ports
+iptables -A UDP -p udp --dport $PORT -j ACCEPT
+iptables -A TCP -p tcp --dport $PORT -j ACCEPT

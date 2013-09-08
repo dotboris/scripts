@@ -14,3 +14,14 @@ Usage:
 
 	gitignore vim,intellij,linux >> .gitignore
 
+openport
+--------
+
+Opens a port in my iptables setup. This script assumes that iptables is
+configured similarly to mine. In my case, I have a TCP and a UDP chain. The
+script adds entries in those chains.
+
+Usage:
+
+	sudo openport <port>
+

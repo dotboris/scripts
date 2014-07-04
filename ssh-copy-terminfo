@@ -1,0 +1,4 @@
+#!/bin/sh
+
+letter=${TERM:0:1}
+scp "$TERMINFO/$letter/$TERM" "$1:$TERMINFO/$letter/"

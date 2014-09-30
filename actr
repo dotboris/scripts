@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ACTR_HOME=$HOME/opt/actr6
+
+sh -c "cd $ACTR_HOME/environment/GUI; ./starter.tcl" &
+
+sleep 5 # dirty but it works
+ccl -l $ACTR_HOME/load-act-r-6.lisp -e '(start-environment)'

@@ -25,3 +25,10 @@ Usage:
 
 	sudo openport <port>
 
+actr
+----
+
+Starts up the actr environment with the gui on linux. This script assumes that
+you have clozure commons lisp installed and that actr in installed under 
+`~/opt/actr6`.
+

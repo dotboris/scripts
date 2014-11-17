@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+# actr 6 gui only
+
+ACTR_HOME=$HOME/opt/actr6
+sh -c "cd $ACTR_HOME/environment/GUI; ./starter.tcl"
